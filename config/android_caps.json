@@ -1,0 +1,11 @@
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:deviceName": "R3CY70B5Z3B",
+  "appium:appPackage": "weather.forecast.rain.radar",
+  "appium:appActivity": ".feature.home.ui.WeatherContentsActivity",
+  "appium:noReset": true,
+  "appium:autoGrantPermissions": true,
+  "appium:newCommandTimeout": 120,
+  "appium:skipUnlock": true
+}
