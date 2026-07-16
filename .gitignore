@@ -9,3 +9,5 @@ venv/
 .venv/
 CLAUDE.md
 *.xml
+*.txt
+!requirements.txt

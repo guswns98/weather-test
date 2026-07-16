@@ -13,12 +13,15 @@ class TestSettings:
     def setup(self, driver):
         self.driver = driver
         self.main = MainPage(driver)
+        self._menu_opened = False
         yield
-        # teardown: 메뉴가 열려있으면 back으로 닫기
-        self.driver.back()
-        time.sleep(0.5)
+        # teardown: 메뉴가 열린 경우에만 back으로 닫기
+        if self._menu_opened:
+            self.driver.back()
+            time.sleep(0.5)
 
     def test_open_menu(self):
         """메뉴 화면이 정상적으로 열리는지 확인합니다."""
         self.main.tap_menu()
+        self._menu_opened = True
         time.sleep(1)
